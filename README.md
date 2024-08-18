@@ -11,6 +11,24 @@ confidence scores.
 - **Supports Multiple Formats**: Accepts both WAV and MP3 files.
 - **GPU Acceleration**: Utilizes GPU if available for faster inference.
 
+## Release
+
+If you prefer to use a pre-built Docker image rather than building it locally,
+you can pull the image directly from Docker Hub. The image is available under
+the repository [chrisjz/yamnet](https://hub.docker.com/r/chrisjz/yamnet).
+
+To pull the latest version of the image:
+
+```bash
+docker pull chrisjz/yamnet:latest
+```
+
+After pulling the image, you can run the container with the following command:
+
+```bash
+docker run -it --rm chrisjz/yamnet:latest
+```
+
 ## Installation
 
 ### Prerequisites
