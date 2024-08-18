@@ -28,6 +28,11 @@ jobs:
     - name: Install ffmpeg
       run: sudo apt-get install -y ffmpeg
 
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
 
