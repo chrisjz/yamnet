@@ -1,6 +1,9 @@
 # YAMNet Audio Event Classification API
 
-This project provides a FastAPI-based web API that uses the YAMNet model to classify audio events. The API takes an audio file (WAV or MP3) as input and returns a list of the top classifications along with their associated confidence scores.
+This project provides a FastAPI-based web API that uses the YAMNet model to
+classify audio events. The API takes an audio file (WAV or MP3) as input and
+returns a list of the top classifications along with their associated
+confidence scores.
 
 ## Features
 
@@ -13,7 +16,8 @@ This project provides a FastAPI-based web API that uses the YAMNet model to clas
 ### Prerequisites
 
 - **Docker**: Make sure Docker is installed and running on your machine.
-- **NVIDIA Docker**: If you want to use GPU, ensure that the NVIDIA Docker Toolkit is installed.
+- **NVIDIA Docker**: If you want to use GPU, ensure that the NVIDIA
+Docker Toolkit is installed.
 
 ### Clone the Repository
 
@@ -30,7 +34,8 @@ Use Docker Compose to build the Docker image and start the container:
 docker-compose up --build
 ```
 
-This will build the image and run the FastAPI application. The API will be available at `http://localhost:8000`.
+This will build the image and run the FastAPI application. The API will
+be available at `http://localhost:8000`.
 
 ## API Usage
 
@@ -118,22 +123,26 @@ If you prefer to run the API locally without Docker, follow these steps:
 
 ### Project Structure
 
-- `app.py`: The main FastAPI application file.
+- `app/api.py`: The main FastAPI application file.
 - `Dockerfile`: Dockerfile for building the application image.
 - `compose.yml`: Docker Compose configuration file.
 - `pyproject.toml`: Poetry configuration file for managing dependencies.
 
 ## License
 
-This project is licensed under the Apache 2.0 License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the Apache 2.0 License.
+See the [LICENSE](LICENSE) file for more details.
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
+Contributions are welcome! Please open an issue or submit a pull request for
+any enhancements or bug fixes.
 
 ## Acknowledgments
 
 - [YAMNet Model](https://www.kaggle.com/models/google/yamnet/tensorFlow2) by Google
-- [thelou1s](https://github.com/thelou1s) - The [YAMNet inference script](https://huggingface.co/spaces/thelou1s/yamnet/blob/main/app.py) this API is based on.
+- [thelou1s](https://github.com/thelou1s) - The [YAMNet inference script](https://huggingface.co/spaces/thelou1s/yamnet/blob/main/app.py)
+this API is based on.
 - [FastAPI](https://fastapi.tiangolo.com/) - The web framework used for this project.
-- [TensorFlow](https://www.tensorflow.org/) - The deep learning framework powering the model.
+- [TensorFlow](https://www.tensorflow.org/) - The deep learning framework
+powering the model.
