@@ -29,6 +29,4 @@ jobs:
       run: poetry install
 
     - name: Run tests
-      env:
-        PYTHONPATH: ./src
-      run: poetry run pytest
+      run: PYTHONPATH=./src poetry run pytest
