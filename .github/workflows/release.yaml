@@ -25,12 +25,6 @@ jobs:
     - name: Update package list
       run: sudo apt-get update
 
-    - name: Add FFmpeg PPA
-      run: sudo add-apt-repository ppa:jonathonf/ffmpeg-4 -y
-
-    - name: Update package list again
-      run: sudo apt-get update
-
     - name: Install ffmpeg
       run: sudo apt-get install -y ffmpeg
 
