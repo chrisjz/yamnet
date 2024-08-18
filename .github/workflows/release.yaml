@@ -22,6 +22,18 @@ jobs:
         sudo rm -rf /usr/local/lib/android
         sudo rm -rf /opt/ghc
 
+    - name: Update package list
+      run: sudo apt-get update
+
+    - name: Add FFmpeg PPA
+      run: sudo add-apt-repository ppa:jonathonf/ffmpeg-4 -y
+
+    - name: Update package list again
+      run: sudo apt-get update
+
+    - name: Install ffmpeg
+      run: sudo apt-get install -y ffmpeg
+
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
 
@@ -30,9 +42,6 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-
-    - name: Install ffmpeg
-      run: sudo apt-get install -y ffmpeg
 
     - name: Install Poetry
       run: curl -sSL https://install.python-poetry.org | python3 -
