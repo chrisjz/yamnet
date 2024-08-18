@@ -23,6 +23,9 @@ RUN curl -sSL https://install.python-poetry.org | python3 -
 # Ensure Poetry is in the PATH
 ENV PATH="/root/.local/bin:$PATH"
 
+# Set the PYTHONPATH to include the /app directory
+ENV PYTHONPATH=/app
+
 # Copy the pyproject.toml and poetry.lock files
 COPY pyproject.toml poetry.lock* /app/
 WORKDIR /app
@@ -37,4 +40,4 @@ COPY . /app
 EXPOSE 8000
 
 # Run the FastAPI app with Uvicorn
-CMD ["poetry", "run", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "7861"]
+CMD ["poetry", "run", "uvicorn", "src.api:app", "--host", "0.0.0.0", "--port", "8000"]
